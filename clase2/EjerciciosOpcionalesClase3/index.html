@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Ejercicios Opcionales Clase 3</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      // Ejercicio 1
+      // Hacer una función que tome un precio y devuelva un alert
+      // informando el precio con y sin iva.
+      // Extra: un segundo parámetro booleano para ver si tiene o no descuento del 15%.
+
+
+      // var priceIn =  parseFloat(prompt("Indique el precio: "));
+      // var discount = confirm("¿Tiene descuento del 15%?");
+      //
+      // function getPrice(price, isDiscount) {
+      //   var totalIVA = price + (price * 0.12);
+      //   var message;
+      //
+      //   if (isDiscount) {
+      //     totalIVA -= (totalIVA * 0.15);
+      //     price -= (price * 0.15);
+      //     message = "El monto con total con IVA y descuento del 15%: " + totalIVA + ",
+      //     el monto total sin IVA y con descuento del 15% es: " + price;
+      //   } else {
+      //     message = "El monto con total con IVA y sin descuento: " + totalIVA + ",
+      //     el monto total sin IVA y sin descuento del 15% es: " + price;
+      //   }
+      //
+      //   return alert(message);
+      // }
+      //
+      // getPrice(priceIn, discount);
+
+    // ===========================================================================
+    // Ejercicio 2
+
+    // Función calcula sueldo. Ingresar sueldo base y horas extra. Devolver categoria
+    // (1 numero cada 1000 de sueldo, ejemplo, $4000 -> cat. 4, hasta cat. 5). -10% de
+    // aportes. Hora extra se paga 1.5 de hora normal para todas las cat. Menos 4 y 5
+    // que pagan 2. Imprimir a consola sueldo base, aportes, horas extras, categoría y
+    // total. Devolver sueldo total.
+    // var salary = parseFloat(prompt("Ingrese el monto del sueldo base"));
+    // var exHoursCant = parseInt(prompt("Indique el número de horas extras"));
+    // var nmHourAm = salary / 30;
+    // var category, exHourAmount, totalAmount;
+    //
+    // var contributions = Number((salary * 0.10).toFixed(2));
+    //
+    // if (salary <1001) {
+    //   category = 1;
+    // } else if (salary > 1000 && salary < 2001) {
+    //   category = 2;
+    // } else if (salary > 2000 && salary < 3001) {
+    //   category = 2;
+    // } else if (salary > 3000 && salary < 4001) {
+    //   category = 2;
+    // } else {
+    //   category = 5;
+    // }
+    //
+    // if (category == 4 || category == 5) {
+	  //  exHourAmount = Number(((nmHourAm * 2) * exHoursCant).toFixed(2));
+  	// } else {
+  	//  exHourAmount = Number(((nmHourAm * 1.5) * exHoursCant).toFixed(2));
+  	// }
+    //
+    // totalAmount = Number(((salary - contributions) + exHourAmount).toFixed(2));
+    //
+    // console.log("Sueldo base:", salary);
+    // console.log("Aportes:", contributions);
+    // console.log("Número de horas extras:", exHoursCant);
+    // console.log("Monto por horas extras:", exHourAmount);
+    // console.log("Categoría:", category);
+    // console.log("Sueldo total", totalAmount);
+
+    // ===========================================================================
+    // Ejercicio 3
+    // Rehacer el juego de dados de la clase anterior, guardando la puntuación del
+    // usuario. Debería durar 5 turnos o hasta que alguien gane.
+
+
+    // function play() {
+    //   var numeroAzar;
+    //   var points = 0;
+    //
+    //   for (var i = 0; i<5; i++) {
+    //     numeroAzar = Math.floor(Math.random()*11);
+    //     var n = i +1;
+    //
+    //     if ( (numeroAzar > 0 && numeroAzar < 4) && (i<4)) {
+    //        points += 5;
+    //        alert("Turno: " + n + ". Número generado: " + numeroAzar + ". Tiene " + points + " puntos!");
+    //        console.log("Turno: " + n + ". Número generado: " + numeroAzar + ". Tiene " + points + " puntos!");
+    //     } else if ((numeroAzar > 3 && numeroAzar < 7) && (i<4)) {
+    //        points += 10;
+    //        alert("Turno: " + n + ". Número generado: " + numeroAzar + ". Tiene " + points + " puntos!");
+    //        console.log("Turno: " + n + ". Número generado: " + numeroAzar + ". Tiene " + points + " puntos!");
+    //     } else if((numeroAzar > 6 && numeroAzar < 10) && (i<4)) {
+    //        points += 50;
+    //        alert("Turno: " + n + ". Número generado: " + numeroAzar + ". Tiene " + points + " puntos!");
+    //        console.log("Turno: " + n + ". Número generado: " + numeroAzar + ". Tiene " + points + " puntos!");
+    //     } else if (numeroAzar == 0 && (i<4)) {
+    //        alert("Turno: " + n +  ". Número generado: " + numeroAzar +". No suma puntos!!");
+    //        console.log("Turno: " + n + ". Número generado: " + numeroAzar +  ".  No suma puntos!!"
+    //        + ". Puntaje anterior: " + points + " puntos!");
+    //     } else if (numeroAzar == 10) {
+    //        alert("Número generado: " + numeroAzar +  ". El jugador GANÓ!!");
+    //        console.log("Número generado: " + numeroAzar +  ". El jugador GANO!!");
+    //        break;
+    //     }  else {
+    //        alert("Maximo número de turnos (5) alcanzado. El jugador PERDIÓ!!");
+    //        console.log("Maximo número de turnos (5) alcanzando. El jugador PERDIÓ!!");
+    //     }
+    //   }
+    // }
+    //
+    // play();
+
+    // ===========================================================================
+    // Ejercicio 4
+
+    // Piedra, Papel, o Tijera!
+    // Tenemos que tener un array con las tres opciones
+    // Generar la opcion de la computadora, usando Math.floor(Math.random()*3) (nos va a devolver 0, 1 o 2)
+    // Pedirle al usuario una opción por escrito y fijarnos a que opcion equivale
+    // Checkear si el usuario gano, empato o perdio, y comunicarle con un alert
+
+    // Rehacer el Piedra, papel o tijera! de la clase anterior, guardando la puntuación del usuario.
+    // Debería durar 10 turnos y después anunciar el ganador.
+	  // Extra: chequear empate.
+
+    // function getDescription(optPC) {
+    //    var description;
+    //
+  	// 		switch(optPC) {
+  	// 			case 0:
+  	// 				description = "piedra";
+  	// 				break;
+  	// 			case 1:
+  	// 				description = "papel";
+  	// 				break;
+  	// 			default:
+  	// 				description = "tijera";
+  	// 		 }
+    //
+  	// 		return description;
+  	// 	}
+    //
+  	// 	function getWinner(ptUser, ptAuto) {
+  	// 		if (ptUser > ptAuto) {
+    //
+  	// 		  alert("El usuario ha ganado!! Puntaje Final: " + ptUser);
+    //
+  	// 		} else if (ptAuto > ptUser) {
+    //
+  	// 		  alert("La PC ha ganado!! Puntaje Final: " + ptAuto);
+    //
+  	// 		} else {
+    //
+  	// 		  alert("Hay un empate!! Puntaje del usuario: " + ptUser + ". Puntaje de la PC: " + ptAuto);
+    //
+    //     }
+  	// 	}
+    //
+  	//  function play() {
+  	// 	 var opt = ['piedra', 'papel', 'tijera'];
+  	// 	 var pointsUser = 0;
+  	// 	 var pointsAuto = 0;
+  	// 	 var optAutoDesc;
+  	// 	 var optAuto;
+  	// 	 var optUser;
+  	// 	 var n;
+    //
+  	// 	 for (var i = 0; i < 10; i++ ) {
+    //      optUser = prompt('Escoja una opción: Piedra, Papel o Tijera').toLowerCase();
+  	// 	   optAuto = Math.floor(Math.random() * 3);
+    //
+  	// 		 optAutoDesc = getDescription(optAuto);
+  	// 		 n = i + 1;
+    //
+  	// 		 if ((optUser === opt[0] && optAuto == 0) ||
+  	// 			 (optUser === opt[1] && optAuto == 1) ||
+  	// 			 (optUser === opt[2] && optAuto == 2)) {
+    //
+  	// 			 console.log("Turno: " + n +". Opción del usuario: " + optUser + " Vs. "
+    //        + "Opción automática: " + optAutoDesc + ". Empate! No acumulan puntos!! ");
+  	// 			 console.log("Puntaje del Usuario: " + pointsUser);
+  	// 			 console.log("Puntaje de la PC: " + pointsAuto);
+    //
+  	// 		 } else if ((optUser === opt[0] && optAuto == 1) ||
+  	// 			 (optUser === opt[1] && optAuto == 2) ||
+  	// 			 (optUser === opt[2] && optAuto == 0)) {
+    //
+  	// 			 pointsAuto++;
+  	// 			 console.log("Turno: " + n + ". Opción del usuario: " + optUser + " Vs. "
+    //        + "Opción automática: " + optAutoDesc + ". 1 Punto para la PC!! ");
+  	// 			 console.log("Puntaje del Usuario: " + pointsUser);
+  	// 			 console.log("Puntaje de la PC: " + pointsAuto);
+    //
+  	// 		 } else if ((optUser === opt[0] && optAuto == 2) ||
+  	// 			 (optUser === opt[1] && optAuto == 0) ||
+  	// 			 (optUser === opt[2] && optAuto == 1)) {
+    //
+  	// 			 pointsUser++;
+  	// 			 console.log("Turno: " + n + ". Opción del usuario: " + optUser + " Vs. "
+    //        + "Opción automática: " + optAutoDesc + ". 1 Punto para el usuario!!");
+  	// 			 console.log("Puntaje del Usuario: " + pointsUser);
+  	// 			 console.log("Puntaje de la PC: " + pointsAuto);
+    //
+  	// 		 } else {
+  	// 		   i--;
+  	// 			 n--;
+  	// 			 alert('Opción inválida, por favor escoja una opción entre Piedra, Papel o Tijera');
+  	// 		 }
+  	// 	 }
+    //
+  	// 	getWinner(pointsUser, pointsAuto);
+  	//  }
+    //
+    //  play();
+
+    // ===========================================================================
+    // Trabajo Práctico # 3
+
+    // Mejorar nuestra calculadora.
+    // Deberá poder ingresar 2 valores y qué operación quiere realizar.
+    // Imprimir resultado en la consola.
+
+    // Declaración de variables y obtención de valores
+	  var result = 0;
+
+    var op1 = parseInt(prompt("Por favor ingresar número #1: "));
+    var op2 = parseInt(prompt("Por favor ingresar número #2: "));
+    var operation = parseInt(prompt("Por favor ingresar el número de operación a aplicar: \n"
+    +"1) Suma\n" + "2) Resta\n" + "3) Multiplicación\n" + "4) División "));
+
+	  switch (operation) {
+		  case 1:
+  			result = op1 + op2;
+        console.log("El resultado de la suma es:", result);
+			  break;
+
+		  case 2:
+		    result = op1 - op2;
+        console.log("El resultado de la resta es: " + result);
+			  break;
+
+		  case 3:
+		    result = op1 * op2;
+        console.log("El resultado de la multiplicación es: " + result);
+			  break;
+
+		  case 4:
+        if (op2 == 0) {
+          console.log("El operando 2 es 0. No es posible dividir por 0.");
+        } else {
+          result = op1 / op2;
+          console.log("El resultado de la división es: " + result);
+        }
+
+			  break;
+
+		  default:
+			  console.log("El número de operación ingresado es inválido");
+	   }
+
+    </script>
+
+  </body>
+</html>
